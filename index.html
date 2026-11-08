@@ -3,9 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>RAKSYON R-Secure</title>
+<title>R-Secure | Self-Hosted Security for AI Coding Tools | RAKSYON</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="R-Secure by RAKSYON: self-hosted visibility into every file, secret and command your developers' AI coding tools touch. Secrets are never stored, and your activity data never leaves your network.">
+<meta name="description" content="See every file, secret and command your developers' AI coding tools touch. Self-hosted: secrets are never stored and activity data never leaves your network.">
+<link rel="canonical" href="https://raksyon.tech/">
+<link rel="icon" href="/favicon.ico.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/raksyon-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RAKSYON">
+<meta property="og:title" content="R-Secure | Self-Hosted Security for AI Coding Tools | RAKSYON">
+<meta property="og:description" content="See every file, secret and command your developers' AI coding tools touch. Self-hosted: secrets are never stored and activity data never leaves your network.">
+<meta property="og:url" content="https://raksyon.tech/">
+<meta property="og:image" content="https://raksyon.tech/assets/img/raksyon-logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="R-Secure | Self-Hosted Security for AI Coding Tools | RAKSYON">
+<meta name="twitter:description" content="See every file, secret and command your developers' AI coding tools touch. Self-hosted: secrets are never stored and activity data never leaves your network.">
+<meta name="twitter:image" content="https://raksyon.tech/assets/img/raksyon-logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://raksyon.tech/#org","name":"RAKSYON","url":"https://raksyon.tech/","logo":"https://raksyon.tech/assets/img/raksyon-logo.png","contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"sales@raksyon.tech"},{"@type":"ContactPoint","contactType":"security","email":"security@raksyon.tech"}]},{"@type":"WebSite","@id":"https://raksyon.tech/#site","url":"https://raksyon.tech/","name":"RAKSYON R-Secure","publisher":{"@id":"https://raksyon.tech/#org"},"inLanguage":"en"},{"@type":"SoftwareApplication","name":"R-Secure","applicationCategory":"SecurityApplication","operatingSystem":"Windows, Linux","description":"Self-hosted visibility into every file, secret and command developers' AI coding tools touch. Activity data never leaves your network.","publisher":{"@id":"https://raksyon.tech/#org"},"url":"https://raksyon.tech/"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -119,6 +133,16 @@ h1.split span span{display:block;white-space:nowrap}
 
 /* ───── sections ───── */
 section{position:relative}
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,96px);align-items:start}
+.faq-list{border-bottom:1px solid var(--line)}
+.faq-list details{border-top:1px solid var(--line)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;padding:24px 0;font:500 19px/1.35 var(--f-head);letter-spacing:-.01em}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";flex:none;color:var(--ink-2);font:400 24px/1 var(--f-head);transition:transform .3s var(--ease)}
+.faq-list details[open] summary::after{transform:rotate(45deg)}
+.faq-list summary:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.faq-list p{margin:0 0 26px;max-width:42rem;color:var(--ink-2);line-height:1.6}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}}
 .sec{padding-block:clamp(96px,12vw,168px)}
 h2{font:500 clamp(32px,4vw,60px)/1.04 var(--f-head);letter-spacing:-.025em;margin:22px 0 0;text-wrap:balance}
 h2 em{font-style:normal;font-weight:300;color:var(--ink-3)}
@@ -434,7 +458,7 @@ footer{border-top:1px solid var(--line);padding-block:64px calc(40px + env(safe-
 <header class="hero" id="top">
   <div class="hero-media" aria-hidden="true">
     <canvas id="fallback"></canvas>
-    <video id="bg" autoplay muted loop playsinline preload="auto">
+    <video id="bg" autoplay muted loop playsinline preload="metadata">
       <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4" type="video/mp4">
     </video>
   </div>
@@ -788,6 +812,27 @@ footer{border-top:1px solid var(--line);padding-block:64px calc(40px + env(safe-
     </div>
   </section>
 
+  <section class="sec faq" id="faq" aria-labelledby="faq-h" style="padding-top:0">
+    <div class="wrap faq-grid">
+      <div>
+        <span class="label">FAQ</span>
+        <h2 id="faq-h">Questions teams ask <em>before they deploy.</em></h2>
+        <p class="icp-lede">Can't find your answer? <a href="contact.html">Talk to us</a>.</p>
+      </div>
+      <div class="faq-list">
+        <details class="reveal"><summary>What is R-Secure?</summary><p>R-Secure is self-hosted security for AI coding tools. It records every file, secret and command that tools like Claude Code and Cursor touch on your developers' machines, and blocks the critical ones before they happen.</p></details>
+        <details class="reveal"><summary>Does any of our code or activity data leave our network?</summary><p>No. Every event goes from the developer's machine to your R-Secure server, inside your network. Nothing is sent to RAKSYON. The only outbound call is the license check, which sends the number of agents, the number of events and the server version, never file names, commands, prompts or code.</p></details>
+        <details class="reveal"><summary>Does R-Secure store our secrets?</summary><p>No. Files are scanned in memory on the developer's machine and thrown away. When a key or password turns up, only the rule name and an 8-character fingerprint are kept.</p></details>
+        <details class="reveal"><summary>What does R-Secure detect and block?</summary><p>It ships with 61 built-in rules covering secrets, cloud credentials, private keys, destructive commands, privilege escalation and more. For critical rules, the hooks stop the read or the command before it happens. Everything else is recorded and flagged.</p></details>
+        <details class="reveal"><summary>Do we need MDM or a VPN?</summary><p>No. Each developer runs one small single-file agent that sets up the AI tool hooks itself and reports to a server you host. Traffic isn't rerouted, and it doesn't matter whose account the AI tool is signed in to, including personal subscriptions.</p></details>
+        <details class="reveal"><summary>What happens to developers' AI tools if the R-Secure server goes down?</summary><p>They keep working normally.</p></details>
+        <details class="reveal"><summary>Which operating systems are supported?</summary><p>The agent runs on Linux (Ubuntu), macOS and Windows. The kernel watcher, which catches indirect reads by scripts, is Linux only.</p></details>
+        <details class="reveal"><summary>How do we deploy it?</summary><p>Install the R-Secure server on any machine in your network with your license key, create a token for each developer machine, and have each developer run the agent. Events appear in the dashboard within seconds.</p></details>
+        <details class="reveal"><summary>How is R-Secure priced?</summary><p>Per developer, with one seat covering one developer. Plans are Trial, Starter and Enterprise, all self-hosted. Contact us for numbers.</p></details>
+      </div>
+    </div>
+  </section>
+
   <section class="sec cta" id="demo" aria-labelledby="cta-h">
     <span class="doorline" aria-hidden="true"></span>
     <div class="wrap inner">
@@ -812,7 +857,7 @@ footer{border-top:1px solid var(--line);padding-block:64px calc(40px + env(safe-
         <p>R-Secure: self-hosted visibility into what AI coding tools touch, kept inside your network.</p>
         <div class="fvalues"><span>Vigilance</span><span>Precision</span><span>Resilience</span></div>
       </div>
-      <div><h4>Product</h4><ul><li><a href="#product">What it does</a></li><li><a href="#edge">Where data stays</a></li><li><a href="#pricing">Pricing</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="#product">What it does</a></li><li><a href="#edge">Where data stays</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div><h4>Security</h4><ul><li><a href="privacy.html">Privacy &amp; data handling</a></li><li><a href="privacy.html#disclosure">Report a vulnerability</a></li><li><a href=".well-known/security.txt">security.txt</a></li></ul></div>
     </div>
